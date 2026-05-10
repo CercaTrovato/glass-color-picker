@@ -1,0 +1,6 @@
+{
+  "name": "Glass Color Picker",
+  "description": "Interactive Apple-glass style color picker. Upload images, use a beautiful pixel-perfect magnifier to extract colors, and save them for later.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

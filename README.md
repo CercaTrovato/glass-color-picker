@@ -50,19 +50,28 @@ http://localhost:3000
 
 ```bash
 npm run dev
+npm run desktop
 npm run lint
 npm run build
+npm run package
+npm run dist
 npm run preview
 ```
 
 - `npm run dev`: Start the local development server.
+- `npm run desktop`: Start the app in Electron desktop development mode.
 - `npm run lint`: Run the TypeScript check.
 - `npm run build`: Build the production version.
+- `npm run package`: Build an unpacked desktop app for local testing.
+- `npm run dist`: Build Windows installer and portable `.exe` files.
 - `npm run preview`: Preview the production build locally.
 
 - `npm run dev`：启动本地开发服务器。
+- `npm run desktop`：以 Electron 桌面开发模式启动应用。
 - `npm run lint`：运行 TypeScript 检查。
 - `npm run build`：构建生产版本。
+- `npm run package`：构建用于本地测试的未打包桌面应用。
+- `npm run dist`：构建 Windows 安装包和便携版 `.exe` 文件。
 - `npm run preview`：本地预览生产构建结果。
 
 ## Notes / 说明
@@ -70,10 +79,12 @@ npm run preview
 - No API key is required for the current app.
 - `node_modules/` and `dist/` are not committed to Git.
 - Use `npm ci` for reproducible installs from `package-lock.json`.
+- Desktop builds are written to `release/`.
 
 - 当前版本不需要任何 API key。
 - `node_modules/` 和 `dist/` 不会提交到 Git。
 - 建议使用 `npm ci`，它会根据 `package-lock.json` 安装一致的依赖版本。
+- 桌面版构建产物会输出到 `release/`。
 
 ## Troubleshooting / 常见问题
 

@@ -2,14 +2,20 @@
   "name": "glass-color-picker",
   "private": true,
   "version": "0.0.0",
+  "description": "A desktop and web image color picker with magnifier sampling and palette suggestions.",
+  "author": "CercaTrovato",
   "type": "module",
+  "main": "electron/main.cjs",
   "engines": {
     "node": ">=22",
     "npm": ">=10"
   },
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
+    "desktop": "concurrently -k \"npm run dev\" \"wait-on http://127.0.0.1:3000 && cross-env ELECTRON_START_URL=http://127.0.0.1:3000 electron .\"",
     "build": "vite build",
+    "package": "npm run build && electron-builder --dir",
+    "dist": "npm run build && electron-builder --win nsis portable",
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
@@ -25,7 +31,34 @@
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^39.2.7",
+    "electron-builder": "^26.0.12",
     "tailwindcss": "^4.1.14",
-    "typescript": "~5.8.2"
+    "typescript": "~5.8.2",
+    "wait-on": "^9.0.3"
+  },
+  "build": {
+    "appId": "com.cercatrovato.glasscolorpicker",
+    "productName": "Glass Color Picker",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   }
 }

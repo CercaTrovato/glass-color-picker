@@ -74,6 +74,12 @@ npm run preview
 - `npm run dist`：构建 Windows 安装包和便携版 `.exe` 文件。
 - `npm run preview`：本地预览生产构建结果。
 
+## Desktop Icon / 桌面图标
+
+The desktop app icon source is stored at `assets/icon.svg`. Windows builds use `assets/icon.ico`.
+
+桌面应用图标源文件位于 `assets/icon.svg`，Windows 打包使用 `assets/icon.ico`。
+
 ## Notes / 说明
 
 - No API key is required for the current app.

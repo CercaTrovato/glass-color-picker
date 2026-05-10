@@ -1,7 +1,7 @@
 {
   "name": "glass-color-picker",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A desktop and web image color picker with magnifier sampling and palette suggestions.",
   "author": "CercaTrovato",
   "type": "module",

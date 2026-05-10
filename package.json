@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "description": "A desktop and web image color picker with magnifier sampling and palette suggestions.",
   "author": "CercaTrovato",
+  "license": "MIT",
   "type": "module",
   "main": "electron/main.cjs",
   "engines": {

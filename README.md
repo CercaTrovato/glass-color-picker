@@ -99,3 +99,9 @@ The desktop app icon source is stored at `assets/icon.svg`. Windows builds use `
 
 - 如果依赖安装失败，请确认 Node.js 版本为 22 或更高。
 - 如果 `3000` 端口已被占用，请停止占用该端口的进程，或使用其他端口启动 Vite。
+
+## License / 许可证
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+本项目使用 MIT License 开源。详情请查看 [LICENSE](LICENSE)。
